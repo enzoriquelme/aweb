@@ -384,11 +384,74 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    nav li {
-        margin: 0 8px;
+@media (max-width: 768px) {
+
+    /* --- HEADER E MENU HAMBÚRGUER --- */
+
+    /* Garante que o header se ajuste ao conteúdo */
+    header .container::after {
+        content: "";
+        display: table;
+        clear: both;
     }
-    nav a {
-        font-size: 0.85rem;
+
+    /* Esconde o menu de navegação horizontal */
+    header nav {
+        display: none;
+        position: absolute;
+        top: 80px; /* Altura do seu header */
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50; /* Sua --cor-60 */
     }
+
+    /* Mostra o menu quando o checkbox é "clicado" */
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+    
+    header nav ul {
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: block; /* Links ficam um embaixo do outro */
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha separadora sutil */
+    }
+
+    header nav ul li a {
+        padding: 20px 0; /* Aumenta a área de clique */
+        display: block; /* Garante que o link ocupe todo o espaço */
+    }
+
+    /* Mostra e estiliza o ícone do menu (☰) */
+    .menu-icon {
+        display: block;
+        float: right;
+        font-size: 28px;
+        padding: 28px 20px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    /* Esconde o checkbox real */
+    .menu-toggle {
+        display: none;
+    }
+
+
+    /* --- CORREÇÃO PARA O FOOTER (COLUNAS) --- */
+    .footer-coluna {
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.menu-toggle,
+.menu-icon {
+    display: none;
 }

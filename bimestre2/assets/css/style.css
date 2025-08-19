@@ -387,50 +387,51 @@ footer {
 /* ======================================================= */
 /* AJUSTES FINAIS PARA CELULAR (VERSÃO DEFINITIVA)         */
 /* ======================================================= */
+/* ======================================================= */
+/* AJUSTES FINAIS PARA CELULAR (MENU MAIS COMPACTO)        */
+/* ======================================================= */
 @media (max-width: 768px) {
 
     /* --- GERAL --- */
     body {
-        /* Aumenta o espaço no topo para o novo layout do header */
         padding-top: 160px;
     }
 
     /* --- HEADER --- */
-
-    /* Garante que o container se ajuste */
     .container {
-        max-width: 90%;
+        max-width: 95%; /* Aumenta um pouco a área útil */
     }
 
-    /* Bloco do logo/nome: ocupa la linha de cima */
     header .logo {
         float: none;
         width: 100%;
         text-align: center;
-        margin-bottom: 20px; /* Espaço entre o logo e o menu */
+        margin-bottom: 20px;
     }
 
-    /* Bloco da navegação: ocupa a linha de baixo */
     header nav {
         float: none;
         width: 100%;
         text-align: center;
+        overflow: hidden; /* Garante que nada vaze */
     }
 
     header nav ul {
         float: none;
         padding: 0;
         display: inline-block;
+        white-space: nowrap; /* Impede que o menu quebre a linha */
     }
 
+    /* AQUI APLICAMOS SUA SUGESTÃO */
     header nav li {
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 2px;   /* Diminui o espaço ENTRE os links */
+        margin-right: 2px;
     }
 
     header nav li a {
-        font-size: 14px; /* Um pouco maior para melhor leitura */
-        padding: 5px;
+        font-size: 12.5px; /* Diminui a fonte para caber */
+        padding: 4px;      /* Diminui o espaço DENTRO de cada link */
     }
 
 
@@ -442,6 +443,8 @@ footer {
         text-align: center;
     }
 }
+
+
 
 
 

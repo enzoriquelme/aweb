@@ -32,6 +32,10 @@ header {
     box-sizing: border-box;
 }
 
+header .logo a:visited h1 {
+    color: var(--cor-branco);
+}
+
 .logo {
     float: left;
     max-width: 60%; /* Controla o espaço do logo */
@@ -443,6 +447,7 @@ footer {
         text-align: center;
     }
 }
+
 
 
 

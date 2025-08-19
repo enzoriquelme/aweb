@@ -7,7 +7,6 @@
     --cor-fundo-claro: #ecf0f1;
 }
 
-/* Reset e Estilos Globais */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -17,18 +16,17 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header Fixo - Versão Corrigida SEM FLEXBOX */
 header {
     background-color: var(--cor-60);
     color: var(--cor-branco);
-    padding: 1rem 10px; /* Reduz padding lateral */
+    padding: 1rem 10px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow: hidden; /* Limpa os floats */
+    overflow: hidden; 
     box-sizing: border-box;
 }
 
@@ -36,9 +34,13 @@ header .logo a:visited h1 {
     color: var(--cor-branco);
 }
 
+header.logo a:hover h1{
+    color:var(--cor-30)
+}
+
 .logo {
     float: left;
-    max-width: 60%; /* Controla o espaço do logo */
+    max-width: 60%;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -62,9 +64,9 @@ header .logo a:visited h1 {
 
 nav {
     float: right;
-    overflow-x: auto; /* Permite rolagem se necessário */
+    overflow-x: auto; 
     white-space: nowrap;
-    max-width: 38%; /* Limita o espaço da navegação */
+    max-width: 38%;
     margin-top: 5px;
     -webkit-overflow-scrolling: touch;
 }
@@ -78,7 +80,7 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 12px; /* Espaçamento reduzido */
+    margin-left: 12px;
 }
 
 nav a {
@@ -93,7 +95,6 @@ nav a:hover {
     color: var(--cor-10);
 }
 
-/* Hero Section - Foto e Texto Centralizados */
 .hero {
     background-color: var(--cor-30);
     color: var(--cor-branco);
@@ -150,15 +151,12 @@ nav a:hover {
 }
 
 .secao h2 {
-  color: #2c3e50; /* Seu --cor-60 */
+  color: #2c3e50;
   text-align: center;
-  font-size: 2.2rem; /* 35px */
-  margin-bottom: 2rem; /* 32px de espaço abaixo do título */
+  font-size: 2.2rem; 
+  margin-bottom: 2rem;
 }
 
-/* [MANTENHA TODOS OS ESTILOS ANTERIORES ATÉ A SEÇÃO DO PORTFÓLIO] */
-
-/* Seção Portfólio Corrigida */
 .cards-container {
     display: block;
     max-width: 1200px;
@@ -168,7 +166,7 @@ nav a:hover {
 }
 
 .card {
-    width: 22%; /* Reduzi para 22% para considerar margens */
+    width: 22%; 
     margin: 1.5%;
     background: var(--cor-branco);
     border-radius: 8px;
@@ -177,7 +175,7 @@ nav a:hover {
     display: inline-block;
     vertical-align: top;
     transition: all 0.3s ease;
-    box-sizing: border-box; /* Garante que padding não some à largura */
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -199,7 +197,6 @@ nav a:hover {
     font-size: 1.2rem;
 }
 
-/* Responsividade do Portfólio */
 @media (max-width: 900px) {
     .card {
         width: 45%;
@@ -215,9 +212,6 @@ nav a:hover {
     }
 }
 
-/* [MANTENHA O RESTO DO SEU CSS ORIGINAL AQUI, INCLUINDO FOOTER E DEMAIS SEÇÕES] */
-
-/* Tabela de Rotina Ajustada */
 .tabela-rotina {
     width: 95%;
     max-width: 800px;
@@ -244,7 +238,6 @@ nav a:hover {
     background-color: var(--cor-fundo-claro);
 }
 
-/* Footer */
 footer {
     background-color: var(--cor-60);
     color: var(--cor-branco);
@@ -255,7 +248,7 @@ footer {
 .footer-conteudo {
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden; /* limpa floats */
+    overflow: hidden; 
 }
 
 .footer-coluna {
@@ -270,7 +263,6 @@ footer {
 }
 
 
-/* Garante que o bloco da lista tenha uma largura máxima e fique no meio da página */
 .lista-curiosidades {
   list-style-type: none; 
   padding-left: 0; 
@@ -279,13 +271,9 @@ footer {
   text-align: center; 
 }
 
-/* Apenas para dar um espaço entre os itens da lista */
 .lista-curiosidades li {
-  /* Espaçamento entre uma curiosidade e outra */
   margin-bottom: 10px; 
-  /* Tamanho da fonte para boa leitura */
   font-size: 18px;
-  /* Altura da linha para o texto "respirar" */
   line-height: 1.6;
 }
 
@@ -311,7 +299,6 @@ footer {
 }
 
 
-/* NOVAS REGRAS ADICIONADAS */
 .footer-coluna ul {
     list-style-type: none;
     padding-left: 0;
@@ -342,9 +329,9 @@ footer {
 }
 
 .redes-sociais a {
-    display: block;           /* cada rede em uma linha */
+    display: block;         
     margin: 10px 0;
-    line-height: 40px;        /* centraliza ícone e texto */
+    line-height: 40px;        
     font-weight: bold;
     color: var(--cor-branco);
     text-decoration: none;
@@ -388,22 +375,14 @@ footer {
     }
 }
 
-/* ======================================================= */
-/* AJUSTES FINAIS PARA CELULAR (VERSÃO DEFINITIVA)         */
-/* ======================================================= */
-/* ======================================================= */
-/* AJUSTES FINAIS PARA CELULAR (MENU MAIS COMPACTO)        */
-/* ======================================================= */
 @media (max-width: 768px) {
 
-    /* --- GERAL --- */
     body {
         padding-top: 160px;
     }
 
-    /* --- HEADER --- */
     .container {
-        max-width: 95%; /* Aumenta um pouco a área útil */
+        max-width: 95%;
     }
 
     header .logo {
@@ -417,29 +396,27 @@ footer {
         float: none;
         width: 100%;
         text-align: center;
-        overflow: hidden; /* Garante que nada vaze */
+        overflow: hidden;
     }
 
     header nav ul {
         float: none;
         padding: 0;
         display: inline-block;
-        white-space: nowrap; /* Impede que o menu quebre a linha */
+        white-space: nowrap; 
     }
 
-    /* AQUI APLICAMOS SUA SUGESTÃO */
     header nav li {
-        margin-left: 2px;   /* Diminui o espaço ENTRE os links */
+        margin-left: 2px;  
         margin-right: 2px;
     }
 
     header nav li a {
-        font-size: 12.5px; /* Diminui a fonte para caber */
-        padding: 4px;      /* Diminui o espaço DENTRO de cada link */
+        font-size: 12.5px; 
+        padding: 4px;     
     }
 
 
-    /* --- FOOTER --- */
     .footer-coluna {
         width: 100%;
         float: none;
@@ -447,6 +424,7 @@ footer {
         text-align: center;
     }
 }
+
 
 
 

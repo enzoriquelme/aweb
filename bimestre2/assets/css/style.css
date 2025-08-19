@@ -38,6 +38,13 @@ header .logo a:hover h1{
     color:var(--cor-30)
 }
 
+header h1 {
+    color: var(--cor-branco);
+    font-size: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .logo {
     float: left;
     max-width: 60%;
@@ -424,6 +431,7 @@ footer {
         text-align: center;
     }
 }
+
 
 
 

@@ -385,59 +385,56 @@ footer {
 }
 
 /* ======================================================= */
-/* AJUSTES PARA CELULAR (COM MENU HAMBÚRGUER CORRIGIDO)    */
-/* ======================================================= */
-/* ======================================================= */
-/* AJUSTES FINAIS PARA CELULAR (LOGO EM CIMA, NAV EMBAIXO) */
-/* ======================================================= */
-/* ======================================================= */
-/* AJUSTES FINAIS PARA CELULAR (VERSÃO CORRIGIDA)          */
+/* AJUSTES FINAIS PARA CELULAR (VERSÃO DEFINITIVA)         */
 /* ======================================================= */
 @media (max-width: 768px) {
 
-    /* --- HEADER COM LAYOUT DE BLOCOS --- */
-
-    /* Garante que o padding do body não seja excessivo */
+    /* --- GERAL --- */
     body {
-        padding-top: 150px; /* Ajusta o espaço para o header */
+        /* Aumenta o espaço no topo para o novo layout do header */
+        padding-top: 160px;
     }
 
-    /* 1. Transforma o logo em um bloco superior completo */
+    /* --- HEADER --- */
+
+    /* Garante que o container se ajuste */
+    .container {
+        max-width: 90%;
+    }
+
+    /* Bloco do logo/nome: ocupa la linha de cima */
     header .logo {
         float: none;
         width: 100%;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px; /* Espaço entre o logo e o menu */
     }
 
-    /* 2. Transforma a navegação em um bloco inferior completo e GARANTE QUE ELA APAREÇA */
+    /* Bloco da navegação: ocupa a linha de baixo */
     header nav {
-        display: block; /* <-- A CORREÇÃO ESTÁ AQUI! */
         float: none;
         width: 100%;
         text-align: center;
     }
-    
-    /* 3. Ajusta a lista de links para ficar centralizada */
+
     header nav ul {
         float: none;
-        display: inline-block;
         padding: 0;
-    }
-    
-    /* 4. Mantém os links na horizontal, mas compactos */
-    header nav ul li {
         display: inline-block;
-        margin-left: 8px;
     }
 
-    header nav ul li a {
-        font-size: 13px;
+    header nav li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    header nav li a {
+        font-size: 14px; /* Um pouco maior para melhor leitura */
         padding: 5px;
     }
 
 
-    /* --- CORREÇÃO PARA O FOOTER --- */
+    /* --- FOOTER --- */
     .footer-coluna {
         width: 100%;
         float: none;
@@ -445,6 +442,7 @@ footer {
         text-align: center;
     }
 }
+
 
 
 

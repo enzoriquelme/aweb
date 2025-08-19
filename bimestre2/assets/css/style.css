@@ -387,67 +387,48 @@ footer {
 /* ======================================================= */
 /* AJUSTES PARA CELULAR (COM MENU HAMBÚRGUER CORRIGIDO)    */
 /* ======================================================= */
+/* ======================================================= */
+/* AJUSTES FINAIS PARA CELULAR (LOGO EM CIMA, NAV EMBAIXO) */
+/* ======================================================= */
 @media (max-width: 768px) {
 
-    /* --- HEADER E MENU HAMBÚRGUER --- */
+    /* --- HEADER COM LAYOUT DE BLOCOS --- */
 
-    /* Garante que o header se ajuste ao conteúdo */
-    header .container::after {
-        content: "";
-        display: table;
-        clear: both;
+    /* 1. Transforma o logo em um bloco superior completo */
+    header .logo {
+        float: none;           /* Remove o alinhamento lateral do desktop */
+        width: 100%;           /* Força o bloco do logo a ocupar a largura toda */
+        text-align: center;
+        margin-bottom: 15px;   /* Cria o espaço para o menu vir abaixo */
     }
 
-    /* Esconde o menu de navegação horizontal */
+    /* 2. Transforma a navegação em um bloco inferior completo */
     header nav {
-        display: none;
-        position: absolute;
-        top: 80px; /* Altura do seu header */
-        left: 0;
-        width: 100%;
-        background-color: #2c3e50; /* Sua --cor-60 */
-        z-index: 999; /* <-- ADICIONADO: Garante que o menu apareça NA FRENTE de tudo */
-    }
-
-    /* Mostra o menu quando o checkbox é "clicado" */
-    .menu-toggle:checked ~ nav {
-        display: block;
+        float: none;           /* Remove o alinhamento lateral do desktop */
+        width: 100%;           /* Força o bloco de navegação a ocupar a largura toda */
+        text-align: center;
     }
     
+    /* 3. Ajusta a lista de links para ficar centralizada dentro do bloco de navegação */
     header nav ul {
+        float: none;
+        display: inline-block; /* Truque para centralizar uma lista de largura variável */
         padding: 0;
-        float: none; /* <-- ADICIONADO: Remove o float do desktop para evitar bugs */
     }
-
+    
+    /* 4. Mantém os links na horizontal, mas compactos */
     header nav ul li {
-        display: block; /* Links ficam um embaixo do outro */
-        text-align: center;
-        margin: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha separadora sutil */
+        display: inline-block; /* Mantém os itens lado a lado */
+        margin-left: 8px;      /* Reduz o espaçamento entre eles */
     }
 
     header nav ul li a {
-        padding: 20px 0; /* Aumenta a área de clique */
-        display: block; /* Garante que o link ocupe todo o espaço */
-    }
-
-    /* Mostra e estiliza o ícone do menu (☰) */
-    .menu-icon {
-        display: block;
-        float: right;
-        font-size: 28px;
-        padding: 28px 20px;
-        cursor: pointer;
-        color: #fff;
-    }
-
-    /* Esconde o checkbox real */
-    .menu-toggle {
-        display: none;
+        font-size: 13px;       /* Diminui a fonte para caber na tela */
+        padding: 5px;
     }
 
 
-    /* --- CORREÇÃO PARA O FOOTER (COLUNAS) --- */
+    /* --- CORREÇÃO PARA O FOOTER (CONTINUA A MESMA) --- */
     .footer-coluna {
         width: 100%;
         float: none;
@@ -456,23 +437,5 @@ footer {
     }
 }
 
-    /* Esconde o checkbox real */
-    .menu-toggle {
-        display: none;
-    }
 
-
-    /* --- CORREÇÃO PARA O FOOTER (COLUNAS) --- */
-    .footer-coluna {
-        width: 100%;
-        float: none;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-}
-
-.menu-toggle,
-.menu-icon {
-    display: none;
-}
 

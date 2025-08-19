@@ -390,45 +390,54 @@ footer {
 /* ======================================================= */
 /* AJUSTES FINAIS PARA CELULAR (LOGO EM CIMA, NAV EMBAIXO) */
 /* ======================================================= */
+/* ======================================================= */
+/* AJUSTES FINAIS PARA CELULAR (VERSÃO CORRIGIDA)          */
+/* ======================================================= */
 @media (max-width: 768px) {
 
     /* --- HEADER COM LAYOUT DE BLOCOS --- */
 
-    /* 1. Transforma o logo em um bloco superior completo */
-    header .logo {
-        float: none;           /* Remove o alinhamento lateral do desktop */
-        width: 100%;           /* Força o bloco do logo a ocupar a largura toda */
-        text-align: center;
-        margin-bottom: 15px;   /* Cria o espaço para o menu vir abaixo */
+    /* Garante que o padding do body não seja excessivo */
+    body {
+        padding-top: 150px; /* Ajusta o espaço para o header */
     }
 
-    /* 2. Transforma a navegação em um bloco inferior completo */
+    /* 1. Transforma o logo em um bloco superior completo */
+    header .logo {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* 2. Transforma a navegação em um bloco inferior completo e GARANTE QUE ELA APAREÇA */
     header nav {
-        float: none;           /* Remove o alinhamento lateral do desktop */
-        width: 100%;           /* Força o bloco de navegação a ocupar a largura toda */
+        display: block; /* <-- A CORREÇÃO ESTÁ AQUI! */
+        float: none;
+        width: 100%;
         text-align: center;
     }
     
-    /* 3. Ajusta a lista de links para ficar centralizada dentro do bloco de navegação */
+    /* 3. Ajusta a lista de links para ficar centralizada */
     header nav ul {
         float: none;
-        display: inline-block; /* Truque para centralizar uma lista de largura variável */
+        display: inline-block;
         padding: 0;
     }
     
     /* 4. Mantém os links na horizontal, mas compactos */
     header nav ul li {
-        display: inline-block; /* Mantém os itens lado a lado */
-        margin-left: 8px;      /* Reduz o espaçamento entre eles */
+        display: inline-block;
+        margin-left: 8px;
     }
 
     header nav ul li a {
-        font-size: 13px;       /* Diminui a fonte para caber na tela */
+        font-size: 13px;
         padding: 5px;
     }
 
 
-    /* --- CORREÇÃO PARA O FOOTER (CONTINUA A MESMA) --- */
+    /* --- CORREÇÃO PARA O FOOTER --- */
     .footer-coluna {
         width: 100%;
         float: none;

@@ -420,7 +420,35 @@ footer {
         margin-bottom: 30px;
         text-align: center;
     }
+
+       .tabela-rotina {
+        width: 100%; 
+        table-layout: auto;
+        font-size: 14px;
+    }
+
+    .tabela-rotina th:nth-child(1),
+    .tabela-rotina td:nth-child(1) {
+        width: 20%;
+    }
+
+    .tabela-rotina th:nth-child(2),
+    .tabela-rotina td:nth-child(2) {
+        width: 26%;
+    }
+
+    .tabela-rotina th:nth-child(3),
+    .tabela-rotina td:nth-child(3) {
+        width: 28%;
+    }
+    
+    .tabela-rotina th:nth-child(4),
+    .tabela-rotina td:nth-child(4) {
+        width: 26%;
+    }
 }
+}
+
 
 
 
